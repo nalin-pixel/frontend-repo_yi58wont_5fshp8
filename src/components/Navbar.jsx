@@ -25,21 +25,21 @@ export default function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-indigo-500 via-blue-500 to-teal-400 shadow-sm" />
-            <div className="font-semibold text-slate-900 tracking-tight text-lg">Itergy</div>
+            <div className="h-9 w-9 rounded-xl bg-gradient-to-br from-[var(--brand-primary)] via-sky-500 to-[var(--brand-accent)] shadow-sm" />
+            <div className="font-semibold tracking-tight text-lg text-[var(--brand-dark)]">Itergy</div>
           </div>
           <nav className="hidden md:flex items-center gap-1">
             {navLinks.map((l) => (
               <button
                 key={l.label}
                 onClick={() => scrollTo(l.label.toLowerCase().replace(/\s/g, '-'))}
-                className="px-3 py-2 text-sm font-medium text-slate-600 hover:text-slate-900 rounded-md transition-colors"
+                className="px-3 py-2 text-sm font-medium text-slate-700 hover:text-[var(--brand-dark)] rounded-md transition-colors nav-underline"
               >
                 {l.label}
               </button>
             ))}
-            <button className="ml-4 inline-flex items-center gap-1 px-3 py-2 text-sm font-medium text-white bg-slate-900 rounded-md hover:bg-slate-800 transition-colors">
-              Contact <ChevronDown className="h-4 w-4 opacity-80" />
+            <button className="ml-4 inline-flex items-center gap-1 px-3 py-2 text-sm font-medium text-white rounded-md transition-colors bg-[var(--brand-primary)] hover:bg-sky-700">
+              Contact <ChevronDown className="h-4 w-4 opacity-90" />
             </button>
           </nav>
           <button onClick={() => setOpen(!open)} className="md:hidden p-2 rounded-md hover:bg-slate-100">
@@ -59,8 +59,8 @@ export default function Navbar() {
                 {l.label}
               </button>
             ))}
-            <button className="mt-2 w-full inline-flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-white bg-slate-900 rounded-md hover:bg-slate-800">
-              Contact <ChevronDown className="h-4 w-4 opacity-80" />
+            <button className="mt-2 w-full inline-flex items-center justify-center gap-2 px-3 py-2 text-sm font-medium text-white rounded-md bg-[var(--brand-primary)] hover:bg-sky-700">
+              Contact <ChevronDown className="h-4 w-4 opacity-90" />
             </button>
           </div>
         </div>
